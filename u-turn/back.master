@@ -1,0 +1,193 @@
+﻿<%@ Master Language="VB" CodeFile="back.master.vb" Inherits="back" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- CSS links -->
+    <link rel="stylesheet" type="text/css" href="css/screen_styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/screen_layout_large.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:956px)"
+        href="css/screen_layout_medium.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)"
+        href="css/screen_layout_small.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet'
+        type='text/css'>
+    <link href="css/responsive-nav.css" type="text/css" rel="Stylesheet" media="only screen and (min-width:50px) and (max-width:500px)" />
+    <!-- //CSS links -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+</asp:ToolkitScriptManager>
+ <!--<h3>Session Idle:&nbsp;<span id="secondsIdle"></span>&nbsp;seconds.</h3>-->
+<asp:LinkButton ID="lnkFake" runat="server" />
+<asp:ModalPopupExtender ID="mpeTimeout" BehaviorID ="mpeTimeout" runat="server" PopupControlID="pnlPopup" TargetControlID="lnkFake"
+    OkControlID="btnYes" CancelControlID="btnNo" BackgroundCssClass="modalBackground" OnOkScript = "ResetSession()">
+</asp:ModalPopupExtender>
+<asp:Panel ID="pnlPopup" runat="server" CssClass="modalPopup" Style="display: none">
+    <div class="header">
+        Session Expiring!
+    </div>
+    <div class="body color_endeavour">  
+        Your Session will expire in&nbsp;<span id="seconds"></span>&nbsp;seconds.<br />
+        Do you want to reset?
+    </div>
+    <div class="footer" align="right">
+        <asp:Button ID="btnYes" runat="server" Text="Yes" CssClass="yes" />
+        <asp:Button ID="btnNo" runat="server" Text="No" CssClass="no" />
+    </div>
+</asp:Panel>
+        <!-- TIMEOUT REQUEST -->
+          <script type="text/javascript">
+              function SessionExpireAlert(timeout) {
+                  var seconds = timeout / 1000;
+                  document.getElementsByName("secondsIdle").innerHTML = seconds;
+                  document.getElementsByName("seconds").innerHTML = seconds;
+                  setInterval(function () {
+                      seconds--;
+                      document.getElementById("seconds").innerHTML = seconds;
+                      document.getElementById("secondsIdle").innerHTML = seconds;
+                  }, 1000);
+                  setTimeout(function () {
+                      //Show Popup before 20 seconds of timeout.
+                      $find("mpeTimeout").show();
+                  }, timeout - 60 * 1000);
+                  setTimeout(function () {
+                      window.location = "login.aspx?rt=_default";
+                  }, timeout);
+              };
+              function ResetSession() {
+                  //Redirect to refresh Session.
+                  window.location = window.location.href;
+              }
+        </script>
+        <!-- END: TIMEOUT REQUEST -->
+      <div id="back">
+            <div class="nav-collapse">
+                <div id="menu-mobile" class="div_auto back_monza font_courier color_white fonts_1_2 ">
+                    <!-- <p id="navigation-expanded">&nbsp;</p>-->
+                    <asp:LinkButton ID="lbMobileOne" runat="server" PostBackUrl="_default.aspx">Home</asp:LinkButton><span
+                        class="menu-bar">|</span><asp:LinkButton ID="lbMobileTwo" runat="server" PostBackUrl="_services.aspx">Services</asp:LinkButton><span
+                            class="menu-bar">|</span><asp:LinkButton ID="lbMobileThree" runat="server" PostBackUrl="_books.aspx">Books</asp:LinkButton><span
+                                class="menu-bar">|</span><asp:LinkButton ID="lbMobileNine" runat="server" PostBackUrl="_books_arabic.aspx">كتب</asp:LinkButton><span
+                                    class="menu-bar">|</span><asp:LinkButton ID="lbMobileFour" runat="server" PostBackUrl="cybergarden.aspx">Cybergarden</asp:LinkButton><span
+                                        class="menu-bar">|</span><asp:LinkButton ID="lbMobileFive" runat="server" PostBackUrl="_help.aspx">Guidance</asp:LinkButton><span
+                                            class="menu-bar">|</span><asp:LinkButton ID="lbMobileSix" runat="server" PostBackUrl="_about.aspx">About</asp:LinkButton>
+                    <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileTen" runat="server" PostBackUrl="_readings.aspx">Readings</asp:LinkButton>
+                    <span
+                        class="menu-bar">|</span><asp:LinkButton ID="lbMobileSeven" runat="server" PostBackUrl="_contact.aspx">Contact Us</asp:LinkButton>
+                    <span
+                        class="menu-bar">|</span><asp:LinkButton ID="lbMobileEight" runat="server" PostBackUrl="_privacy.aspx">Privacy Policy</asp:LinkButton>
+                </div>
+            </div>
+            <a href="#" id="menu-toggle">my menu</a>
+            <div id="topbar" class="font_springsteel">
+                <div class="div_auto">
+                    <div id="topbar-menu">
+                        <p class="back_buttercup color_mineshaft">ADMINISTRATION DASHBOARD</p>
+                        <asp:LinkButton ID="btnLogout" CssClass="back_monza color_white" runat="server">linkbutton</asp:LinkButton>
+
+                    </div>
+                    <p id="topbar-info">
+                        <span class="color_mineshaft">
+                            <script type="text/javascript">
+                                myDate = Date()
+                                document.write(myDate);
+                            </script>
+                        </span><a id="topbar-info-home" href="default.aspx" class="color_boulder">| www.u-turn-lb.com</a>
+                    </p>
+                </div>
+            </div>
+            <p class="clear-fix">
+            </p>
+            <div id="body-container" class="margin">
+                <div id="header" class="div_auto">
+                    <h1 id="header-logo">
+                        <a href="_default.aspx">
+                            <img src="img/des-logo.png" alt="u-turn: community student services" />
+                        </a>
+                    </h1>
+                    <div id="header-rest">
+                        <asp:Repeater ID="rpCybergarden" runat="server" DataSourceID="ds_Cybergarden">
+                            <ItemTemplate>
+                                <div id="header-rest-welcome">
+                                    <img src='img/<%#Eval("description") %>' alt='<%#Eval("category") %>' />
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <asp:SqlDataSource ID="ds_Cybergarden" runat="server" ConnectionString="<%$ ConnectionStrings:UturnCS %>"
+                            SelectCommand="SELECT [category], [description] FROM [general] WHERE [category]= 'cybergarden'"></asp:SqlDataSource>
+
+                    </div>
+                    <p class="clear-fix">
+                    </p>
+                </div>
+                <div class="margin">
+                    <div id="menu" class="div_auto back_monza font_courier color_white fonts_1_2 ">
+                        <asp:LinkButton ID="lbOne" runat="server" PostBackUrl="_default.aspx">Home</asp:LinkButton><span
+                            class="menu-bar">|</span><asp:LinkButton ID="lbTwo" runat="server" PostBackUrl="_services.aspx">Services</asp:LinkButton><span
+                                class="menu-bar">|</span><asp:LinkButton ID="lbThree" runat="server" PostBackUrl="_books.aspx">Books</asp:LinkButton><span
+                                    class="menu-bar">|</span><asp:LinkButton ID="lbNine" runat="server" PostBackUrl="~/_books_arabic.aspx">كتب</asp:LinkButton><span
+                                        class="menu-bar">|</span><a href="#">Cybergarden</a><span
+                                            class="menu-bar">|</span><asp:LinkButton ID="lbFive" runat="server" PostBackUrl="_help.aspx">Guidance</asp:LinkButton><span
+                                                class="menu-bar">|</span><asp:LinkButton ID="lbSix" runat="server" PostBackUrl="_about.aspx">About</asp:LinkButton><span
+                                                    class="menu-bar">|</span><asp:LinkButton ID="lbSeven" runat="server" PostBackUrl="_contact.aspx">Contact</asp:LinkButton><span
+                                                        class="menu-bar">|</span><asp:LinkButton ID="lbEight" runat="server" PostBackUrl="_privacy.aspx">Privacy Policy</asp:LinkButton>
+                        <span class="menu-bar">|</span><asp:LinkButton ID="lbTen" runat="server" PostBackUrl="_readings.aspx">Readings</asp:LinkButton>
+
+                    </div>
+                </div>
+
+
+
+                <div class="margin">
+                    <asp:ContentPlaceHolder ID="body" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <br />
+            <div id="bottom" class="margin">
+                <div id="bottombar">
+                    <div class="div_auto">
+                        <p class="color_lochmara font_courier">
+                            <script type="text/javascript">                        var myDate = new Date(); var myYear = myDate.getFullYear(); document.write("All Rights Reserved. " + myYear + " © U-Turn");</script>
+                        </p>
+                    </div>
+                </div>
+                <div id="bottom-top">
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <asp:ContentPlaceHolder ID="script" runat="server">
+    </asp:ContentPlaceHolder>
+     <!-- JQUERY DECLARATION -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <!-- JQUERY, MOBILE NAVIGATION -->
+    <script type="text/javascript" src="js/responsive-nav.js"></script>
+    <script type="text/javascript">
+                        var navigation = responsiveNav(".nav-collapse", {
+                            animate: true,        // Boolean: Use CSS3 transitions, true or false
+                            transition: 250,      // Integer: Speed of the transition, in milliseconds
+                            label: "Menu",        // String: Label for the navigation toggle
+                            insert: "after",      // String: Insert the toggle before or after the navigation
+                            customToggle: "#menu-toggle",     // Selector: Specify the ID of a custom toggle
+                            openPos: "relative",  // String: Position of the opened nav, relative or static
+                            jsClass: "js",        // String: 'JS enabled' class which is added to <html> el
+                            init: function () { },   // Function: Init callback
+                            open: function () { },   // Function: Open callback
+                            close: function () { }   // Function: Close callback
+                        });
+    </script>
+    <!-- END: JQUERY, MOBILE NAVIGATION -->
+
+
+
+
+</body>
+</html>

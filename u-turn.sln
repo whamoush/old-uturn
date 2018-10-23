@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "u-turn", "u-turn\", "{E13D5A50-5CA2-48C4-A569-C1E4243A013F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_5717"
+		Debug.AspNetCompiler.PhysicalPath = "u-turn\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5717\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_5717"
+		Release.AspNetCompiler.PhysicalPath = "u-turn\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5717\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5717"
+		SlnRelativePath = "u-turn\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E13D5A50-5CA2-48C4-A569-C1E4243A013F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13D5A50-5CA2-48C4-A569-C1E4243A013F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B7AEBAF-1523-46F5-851F-00659D887BB3}
+	EndGlobalSection
+EndGlobal

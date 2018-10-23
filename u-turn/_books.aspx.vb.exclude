@@ -1,0 +1,186 @@
+﻿Imports System.Data.SqlClient
+Imports System.IO
+Partial Class _abooks
+    Inherits Telerik.Web.UI.RadAjaxPage
+    Public folderpath As String = "img/assets/img/books/"
+
+    Protected Sub rpBooks_ItemCommand(source As Object, e As System.Web.UI.WebControls.RepeaterCommandEventArgs) Handles rpBooks.ItemCommand
+        Dim lblId As Label = e.Item.FindControl("lblId")
+        Dim txtTitle As TextBox = e.Item.FindControl("txtTitle")
+        Dim txtAuthor As TextBox = e.Item.FindControl("txtAuthor")
+        Dim txtPublisher As TextBox = e.Item.FindControl("txtPublisher")
+        Dim txtPrice As TextBox = e.Item.FindControl("txtPrice")
+        Dim ddlCategory As DropDownList = e.Item.FindControl("ddlCategory")
+        Dim ddlPosition As DropDownList = e.Item.FindControl("ddlPosition")
+        Dim fuImage As FileUpload = e.Item.FindControl("fuImage")
+        Dim lblImage As Label = e.Item.FindControl("lblImage")
+        Dim cbDir As CheckBox = e.Item.FindControl("cbDir")
+        Dim savebook As New booksclass
+
+
+        If e.CommandName = "save" Then
+            Dim categoryId As Integer = savebook.selectBooksCategoriesId(ddlCategory.SelectedValue)
+            If cbDir.Checked = True Then
+                savebook.updateBooks(lblId.Text, txtTitle.Text, txtAuthor.Text, txtPublisher.Text, txtPrice.Text, categoryId, "rtl", True)
+            Else
+                savebook.updateBooks(lblId.Text, txtTitle.Text, txtAuthor.Text, txtPublisher.Text, txtPrice.Text, categoryId, "ltr", False)
+            End If
+
+
+            rpBooks.DataBind()
+            rpCategories.DataBind()
+
+            lblDone.Visible = True
+
+        End If
+        If e.CommandName = "order" Then
+            savebook.positionBooks(ddlPosition.SelectedValue, lblId.Text)
+            rpBooks.DataBind()
+            rpCategories.DataBind()
+            lblDone.Text = "Book Repositioned"
+            lblDone.Visible = True
+        End If
+        If e.CommandName = "delete" Then
+            If lblImage.Text = "noimage.jpg" Then
+
+            Else
+                File.Delete(Server.MapPath(folderpath) & lblImage.Text)
+            End If
+
+            savebook.deleteBooks(lblId.Text)
+            rpBooks.DataBind()
+            rpCategories.DataBind()
+            lblDone.Text = "Book Deleted."
+            lblDone.Visible = True
+
+        End If
+        If e.CommandName = "upload" Then
+            If fuImage.FileName = Nothing Then
+            Else
+                If lblImage.Text = "noimage.jpg" Then
+                Else
+                    File.Delete(Server.MapPath(folderpath) & lblImage.Text)
+                End If
+
+
+                fuImage.SaveAs(Server.MapPath(folderpath) & fuImage.FileName)
+                savebook.updateBooksImage(lblId.Text, fuImage.FileName)
+                rpBooks.DataBind()
+                rpCategories.DataBind()
+                lblDone.Text = "New Image Uploaded."
+                lblDone.Visible = True
+
+            End If
+        End If
+    End Sub
+
+    Protected Sub rpBooks_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rpBooks.ItemDataBound
+        Dim lblId As Label = e.Item.FindControl("lblId")
+        Dim lblCategory As Label = e.Item.FindControl("lblCategory")
+        Dim lbltitle As Label = e.Item.FindControl("lblTitle")
+        Dim lblIsrtl As Label = e.Item.FindControl("lblIsrtl")
+        Dim cbDir As CheckBox = e.Item.FindControl("cbDir")
+        cbDir.Checked = CBool(lblIsrtl.Text)
+        Dim ddlCategory As DropDownList = e.Item.FindControl("ddlCategory")
+        If lbltitle.Text.Length = 20 Then
+            lbltitle.Text = lbltitle.Text & "..."
+
+        End If
+
+        Dim cnString As String = System.Configuration.ConfigurationManager.ConnectionStrings("UturnCS").ConnectionString
+        Using cn As New SqlConnection(cnString)
+            Using cmd As New SqlCommand("SELECT [category] from [books_categories] where id=" & lblCategory.Text, cn)
+
+
+                cn.Open()
+
+                Dim rdr As SqlDataReader = cmd.ExecuteReader()
+                rdr.Read()
+
+                ddlCategory.SelectedValue = DirectCast(rdr("category"), String)
+
+                cn.Close()
+
+            End Using
+        End Using
+
+        Dim ds_Position As SqlDataSource = e.Item.FindControl("ds_Position")
+        ds_Position.SelectCommand = "select [title] from books where id !=(select id from books where id= " & lblId.Text & " ) order by position asc"
+        ds_Position.DataBind()
+    End Sub
+
+    Protected Sub rpCategories_ItemCommand(source As Object, e As System.Web.UI.WebControls.RepeaterCommandEventArgs) Handles rpCategories.ItemCommand
+        Dim lblId As Label = e.Item.FindControl("lblId")
+        If e.CommandName = "categorize" Then
+            ds_Books.SelectCommand = "select id, SUBSTRING(title, 1, 20) as mytitle, title,  author, publisher, price, image, category, isrtl from books where category=" & lblId.Text
+            ds_Books.DataBind()
+
+
+        End If
+    End Sub
+
+    Protected Sub rpCategories_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rpCategories.ItemDataBound
+        Dim ltlCount As Literal = e.Item.FindControl("ltlCount")
+        Dim lblId As Label = e.Item.FindControl("lblId")
+
+     
+        Dim thisbook As New booksclass
+        ltlCount.Text = thisbook.CountBooksByCategory(lblId.Text)
+
+
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+
+        ds_Books.SelectCommand = "select [id], SUBSTRING(title, 1, 20) as mytitle, title, author, publisher, price, image, category, isrtl from books ORDER BY [position] asc"
+        ds_Books.DataBind()
+
+
+
+    End Sub
+
+    Protected Sub RadSearchBox1_Search(sender As Object, e As Telerik.Web.UI.SearchBoxEventArgs) Handles RadSearchBox1.Search
+        ds_Books.SelectCommand = "select [id], SUBSTRING(title, 1, 20) as mytitle, title, author, publisher, price, image, category, isrtl from books where id=" & e.Value
+
+        ds_Books.DataBind()
+    End Sub
+
+    Protected Sub btnAdd_Click(sender As Object, e As System.EventArgs) Handles btnAdd.Click
+        Dim insertbook As New booksclass
+
+
+        Dim cnString As String = System.Configuration.ConfigurationManager.ConnectionStrings("UturnCS").ConnectionString
+        Using cn As New SqlConnection(cnString)
+            Using cmd As New SqlCommand("SELECT [position] from [books] where position=(SELECT MAX(position) FROM [books])", cn)
+
+                cn.Open()
+
+                Dim rdr As SqlDataReader = cmd.ExecuteReader()
+                rdr.Read()
+
+                Dim maxposition As Integer = DirectCast(rdr("position"), Integer)
+                insertbook.insertBooks("new book", 1, "noimage.jpg", maxposition + 1, "ltr", False)
+                rpBooks.DataBind()
+                rpCategories.DataBind()
+                lblDone.Text = "New Book Added"
+                lblDone.Visible = True
+                cn.Close()
+
+            End Using
+        End Using
+
+
+
+
+
+
+
+    End Sub
+
+    Protected Sub btnGo_Click(sender As Object, e As System.EventArgs) Handles btnGo.Click
+        ds_Books.SelectCommand = "select [id], SUBSTRING(title, 1, 20) as mytitle,title, author, publisher, price, image, category, isrtl from books ORDER BY position ASC"
+        rpBooks.DataBind()
+        RadSearchBox1.Text = String.Empty
+        ds_Books.DataBind()
+    End Sub
+End Class

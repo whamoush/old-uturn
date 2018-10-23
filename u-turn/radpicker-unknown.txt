@@ -1,0 +1,32 @@
+﻿element.style {
+}
+.RadColorPicker_Default .rcpPalette, .RadColorPicker_Default .rcpRoundedRight, .RadColorPicker_Default .rcpRoundedBottomRight, .RadColorPicker_Default .rcpRoundedBottomLeft {
+_background-image: url('WebResource.axd?d=X6wVlIHexZrFOXIR8Hh4-BB2WU9PiVDQ5mlHiW86Otmt2Oiup1pXiYhP…EZriMoS_3ue1RbktQCpku1YgAxOwhmBP8GnmkxHD2NBEIh7Nznp0&t=635417073040000000');
+}
+.RadColorPicker_Default .rcpPalette, .RadColorPicker_Default .rcpRoundedRight, .RadColorPicker_Default .rcpRoundedBottomRight, .RadColorPicker_Default .rcpRightShadow, .RadColorPicker_Default .rcpCornerShadow {
+background-image: url('WebResource.axd?d=BrGSBXgkUMlRqryJ0IZTMY_VzyS6XNBpVRxlkj3ITodH9AJ7w7s4jVl3…pI8A8xgXY7BGVl_iibsSi9b8xcWwrrOlX4rn2tMgx3MNJvX5l1t0&t=635417073040000000');
+}
+.RadColorPicker_Default .rcpPalette, .RadColorPicker_Default input, .RadColorPicker_Default a {
+color: #333;
+}
+.RadColorPicker .rcpPalette, .RadColorPicker .rcpTabs, .RadColorPicker .rcpHeader, .RadColorPicker .rcpWebPalette, .RadColorPicker .rcpRGBPageView ul, .RadColorPicker .rcpMillionColorsPageView, .RadColorPicker .rcpInputsWrapper ul, .RadColorPicker .rcpRecentColors {
+zoom: 1;
+}
+.RadColorPicker .rcpPalette {
+position: relative;
+padding-left: 4px;
+margin: 0 4px 4px -5px;
+background-position: top left;
+background-repeat: no-repeat;
+_border: 0;
+}
+.RadColorPicker, .RadColorPicker * {
+box-sizing: content-box;
+-moz-box-sizing: content-box;
+}
+user agent stylesheetdiv {
+display: block;
+}
+Pseudo ::after element
+.RadColorPicker .rcpPalette:after, .RadColorPicker .rcpTabs:after, .RadColorPicker .rcpHeader:after, .RadColorPicker .rcpWebPalette:after, .RadColorPicker .rcpRGBPageView ul:after, .RadColorPicker .rcpMillionColorsPageView:after, .RadColorPicker .rcpInputsWrapper ul:after, .RadColorPicker .rcpRecentColors:after {clear:none !important;
+}

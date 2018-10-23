@@ -1,0 +1,262 @@
+﻿<--- front.master --->
+<div id="header-rest-welcome">
+                    <p id="header-rest-welcome-social">
+                        <a id="social_1" href="#">Facebook</a><!--
+                    --><a id="social_2" href="#">Twitter</a><!--
+                    --><a id="social_3" href="#">Pinterest</a><!--
+                    --><a id="social_4" href="#">Google Plus</a>
+                    </p>
+                    <p class="seperator">
+                    </p>
+                    <div id="header-rest-welcome-welcome" class="back_noisebuttercup">
+                        <p class="color_monza font_souvenir fonts_1_2">
+                            Welcome to U-turn's Official Website</p>
+                        <p class="welcome-underline">
+                        </p>
+                        <p class="font_courier color_monza">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu lobortis nulla.
+                            Vestibulum ante ipsum primis in faucibus orci.
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+				 <div id="bottom-container">
+            <div id="bottom-content" class="div_auto">
+                <a href="#" id="bottom-logo">
+                    <img src="img/des-logo.png" width="171" height="97" border="0" alt="" /></a><!--
+                  
+                        --><ul id="bottom-content-menu">
+                            <li class="bottom-content-menu-li">
+                                <p class="bottom-content-menu-li-header back_endeavour color_white font_springsteel bolded fonts_0_9">
+                                    LOREM IPSUM</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Aliquam posuere libero</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Congue diam</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Pharetra in aliquet eros lobortis</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Class aptent</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Taciti sociosqu</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Ad litora torquent per conubia</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Nostra</p>
+                            </li>
+                            <!--
+                 -->
+                            <li class="bottom-content-menu-li">
+                                <p class="bottom-content-menu-li-header back_buttercup color_white font_springsteel bolded fonts_0_9">
+                                    DOLOR SIT AMET</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Per inceptos himenaeos</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Proin ligula nisi</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Consectetur aliquet</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Ad litora torquent per conubia</p>
+                            </li>
+                            <!--
+                    -->
+                            <li class="bottom-content-menu-li">
+                                <p class="bottom-content-menu-li-header back_monza color_white font_springsteel bolded fonts_0_9">
+                                    CONSECTETUR</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Pharetra in aliquet eros lobortis</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Taciti sociosqu</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Nostra</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Class aptent</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Taciti sociosqu</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Aliquam posuere libero</p>
+                            </li>
+                            <!--
+                    -->
+                            <li class="bottom-content-menu-li">
+                                <p class="bottom-content-menu-li-header back_endeavour color_white font_springsteel bolded fonts_0_9">
+                                    ADISCIPLING ELIT</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Aliquam posuere libero</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Congue diam</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Pharetra in aliquet eros lobortis</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Class aptent</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Taciti sociosqu</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Ad litora torquent per conubia</p>
+                            </li>
+                            <!--
+                    -->
+                            <li class="bottom-content-menu-li">
+                                <p class="bottom-content-menu-li-header back_buttercup color_white font_springsteel bolded fonts_0_9">
+                                    VESTIBULUM</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Proin ligula nisi</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Consectetur aliquet</p>
+                                <p class="bottom-content-menu-li-items color_white font_courier fonts_0_9">
+                                    Ad litora torquent per conubia</p>
+                            </li>
+                        </ul>
+                <p class="clear-fix">
+            </div>
+            </p>
+            <div id="bottombar">
+                <div class="div_auto">
+                    <p class="color_lochmara font_courier">
+                        All Rights Reserved. 2013 © U-Turn</p>
+                </div>
+            </div>
+        </div>
+
+<--- default.aspx --->
+    <div id="cybergarden-btn">
+                <img id="cybergarden-img" src="img/cybergarden.png" width="173" height="69" alt="" /></div>
+        </div>
+
+
+<--- services.aspx --->
+
+   <p class="page_item_title back_endeavour font_courier color_white">
+                    B/W PRINTING</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.500 per paper<br />
+                    <span class="bolded">delivery: </span>2 days<br />
+                </p>
+                <p class="page_item_title back_endeavour font_courier color_white">
+                    B/W PHOTOCOPYING</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.500 per paper<br />
+                    <span class="bolded">delivery: </span>2 days<br />
+                </p>
+                <p class="page_item_title back_endeavour font_courier color_white">
+                    COLORED PRINTING & PHOTOCOPYING</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.500 per paper<br />
+                    <span class="bolded">delivery: </span>2 days<br />
+                </p>
+                <p class="page_item_title back_endeavour font_courier color_white">
+                    COLORED PRINTING & PHOTOCOPYING</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.500 per paper<br />
+                    <span class="bolded">delivery: </span>2 days<br />
+                </p>
+                <p class="page_item_title back_endeavour font_courier color_white">
+                    TYPING (ARABIC/ENGLISH/FRENCH)</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.500 per page<br />
+                    <span class="bolded">delivery: </span>2 days<br />
+                </p>
+                <p class="page_item_title back_endeavour font_courier color_white">
+                    BINDING</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.15,000<br />
+                    <span class="bolded">delivery: </span>immediate<br />
+                </p>
+                <p class="page_item_title back_endeavour font_courier color_white">
+                    LAMINATION</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.15,000<br />
+                    <span class="bolded">delivery: </span>immediate<br />
+                </p>
+                <p class="page_item_title back_endeavour font_courier color_white">
+                    ARAMEX EXPRESS CO.</p>
+                <p class="font_courier color_endeavour">
+                    <span class="bolded">price: </span>L.L.15,000<br />
+                    <span class="bolded">delivery: </span>immediate<br />
+                    <span class="bolded">description: </span>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Ut at lorem luctus, pretium ligula eu, ultricies dolor. Quisque
+                    eu dignissim ipsum. Curabitur interdum convallis augue, et varius augue porta ornare.
+                    Vestibulum at leo nec est imperdiet porta. Donec dictum mollis iaculis. In a auctor
+                    tortor, at semper leo. In commodo hendrerit nunc sed volutpat. Vivamus vitae leo
+                    ut nibh rutrum aliquam sed eget tellus. Aliquam vel velit augue. Suspendisse laoreet
+                    sem orci, tincidunt aliquet ante imperdiet eget.
+                </p> 
+
+
+<--- screen_styles.css --->
+
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social{text-align:right;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a{background:url(../img/des-social.png) no-repeat;display:inline-block;margin:0px;margin-left:5px;font-size:0px;width:35px;height:35px;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_1:hover{background-position:bottom left;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_2{background-position:-42px top;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_2:hover{background-position:-42px bottom;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_3{background-position:-84px top;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_3:hover{background-position:-84px bottom;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_4{background-position:-125px top;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_4:hover{background-position:-125px bottom;}
+div#body-container div#header div#header-rest div#header-rest-welcome div#header-rest-welcome-welcome{padding:30px 20px 30px 20px;height:85px;}
+.welcome-underline{border-top:1px solid #f7be54;width:100%;margin:10px 0 10px 0;}
+
+
+
+
+
+
+div#bottom div#bottom-container{width:100%;background:url(../img/des-noisemineshaft.png) repeat;}
+div#bottom div#bottom-container div#bottom-content{padding-top:40px;position:relative;}
+div#bottom div#bottom-container div#bottom-content a#bottom-logo{left:10px;}
+div#bottom div#bottom-container div#bottom-content a#bottom-logo{padding:15px 0 15px 0;border:2px solid #e1001a;text-align:center;width:186px;text-align:center;height:auto;background:#fff;display:block;position:absolute;top:40px;left:0;}
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu{padding:0px;margin:0px;vertical-align:top;list-style-type:none;margin-bottom:70px;margin-left:190px;}
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li{display:inline-block;}
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li.bottom-content-menu-li{width:130px;margin-left:20px;vertical-align:top;}
+
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li.bottom-content-menu-li p.bottom-content-menu-li-header
+{padding:5px 0px 5px 0px;text-align:center;margin-bottom:25px;}
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li.bottom-content-menu-li p.bottom-content-menu-li-items{
+margin-bottom:8px;}
+
+div#bottom div#bottom-container div#bottombar{width:100%;height:45px;background:url(../img/trans.png) repeat;}
+div#bottom div#bottom-container div#bottombar div p{text-align:right;padding:13px 0 13px 0;}
+
+/*div#cybergarden-btn{background:url(img/des-dotted_bg.png) repeat-x;margin-left:10px;width:212px;height:68px;float:left;text-align:center;padding: 6px 0 6px 0;}
+div#cybergarden-btn:hover{background:url(img/des-dotted_bg_hover.png) repeat-x}
+div#cybergarden-btn img#cybergarden-img{margin:0 auto;}*/
+
+
+<--- screen_layout_medium.css --->
+
+@media screen and (max-width:682px)
+{
+  
+    div#body-container div#header div#header-rest div#header-rest-welcome div#header-rest-welcome-welcome p.font_courier{font-size:0.8em;}
+    div#body-container div#header div#header-rest div#header-rest-welcome div#header-rest-welcome-welcome p.font_souvenir{font-size:1em;}
+    div#body-container div#header div#header-rest div#header-rest-welcome div#header-rest-welcome-welcome{padding:12px 20px 30px 20px;height:65px;}
+    
+
+
+
+
+	div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu{margin-left:200px;padding-right:10px;}
+
+}
+
+
+<--- screen_layout_small.css --->
+
+div#bottom div#bottom-container div#bottom-content a#bottom-logo{display:none !important;}
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu{margin-left:0px;}
+
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li{display:block;}
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li.bottom-content-menu-li{padding:0 5px 0 5px;width:auto;margin-left:0px;  }
+
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li.bottom-content-menu-li p.bottom-content-menu-li-header
+{margin-bottom:5px;}
+div#bottom div#bottom-container div#bottom-content ul#bottom-content-menu li.bottom-content-menu-li p.bottom-content-menu-li-items{
+margin-bottom:5px;padding:4px 0 4px 0;background-color:rgba(0,0,0,.20);padding-left:5px;}

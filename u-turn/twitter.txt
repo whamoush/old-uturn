@@ -1,0 +1,35 @@
+﻿				##### IN front.master / after div#header-rest-welcome #####
+				<div id="header-rest-twitter">
+                    <div id="header-rest-twitter-container">
+                        <p id="header-rest-twitter-header" class="back_stripeendeavour">
+                            <img src="img/twitter.png" alt="" width="98" height="20" />
+                        </p>
+                        <div id="header-rest-twitter-tweets" class="back_endeavour font_courier color_white ">
+                            <p class="fonts_0_8">
+                                #U-Turn’s very first tweet!</p>
+                            <p id="header-rest-twitter-tweets-absolute" class="fonts_0_8">
+                                3 hours 55 min ago<br />
+                                <span class="bolded">uturnonline</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+				
+				
+				##### IN: screen_styles.css #####
+				div#body-container div#header div#header-rest div#header-rest-twitter{width:187px;float:left;}
+div#body-container div#header div#header-rest div#header-rest-twitter div#header-rest-twitter-container{margin-left:10px;}
+div#body-container div#header div#header-rest div#header-rest-twitter p#header-rest-twitter-header{padding:8px;border-bottom:1px solid #10537f;}
+div#body-container div#header div#header-rest div#header-rest-twitter div#header-rest-twitter-tweets{padding:10px;height:133px;position:relative;}
+div#body-container div#header div#header-rest div#header-rest-twitter div#header-rest-twitter-tweets p#header-rest-twitter-tweets-absolute{font-style:italic;text-align:right;position:absolute;bottom:10px;right:10px;}
+	
+
+				##### IN: screen_layout_small.css ####
+				div#body-container div#header div#header-rest div#header-rest-twitter{display:none;}
+
+
+				##### IN: screen_layout_medium.css ####
+				div#body-container div#header div#header-rest div#header-rest-twitter{display:none;}

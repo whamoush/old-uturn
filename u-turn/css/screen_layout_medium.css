@@ -1,0 +1,45 @@
+﻿div#content div#content-bookguidance div#content-bookguidance-left{width:49%;}
+div#content div#content-bookguidance div#content-bookguidance-guidance{width:49%;margin-left:2%;}
+div#contact ul li h3{font-size:1.3em !important;}
+
+
+
+@media screen and (max-width:780px)
+{
+    div#body-container div#header div#header-logo a img{}
+    div#body-container div#header div#header-logo{padding-top:45px;height:177px;}
+    
+}
+@media screen and (max-width:682px)
+{
+    
+    
+    div#topbar p#topbar-info{padding-top:9px;}
+    div#topbar p#topbar-info span.color_alto{font-size:0.8em;}
+    div#body-container div#header h1#header-logo a img{}
+    div#body-container div#header h1#header-logo{}
+   
+    
+}
+@media screen and (max-width:620px)
+{       
+
+    div#topbar div#topbar-menu a{font-size:0.8em;}
+  
+  
+        
+        div#topbar p#topbar-info span.color_alto{display:none;}
+        div#topbar p#topbar-info a#topbar-info-home{display:block;}
+
+       div#body-container div#header div#header-rest{float:none;width:auto;}
+       div#body-container div#menu {font-size:0.85em;}
+       
+}
+/*div#body-container div#header div#header-rest div#header-rest-welcome{width:100%;float:none;}*/ /* moved to screen_styles after removing twitter*/
+
+
+div#body-container div#header div#header-rest div#header-rest-search{}
+
+
+
+

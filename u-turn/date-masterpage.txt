@@ -1,0 +1,7 @@
+﻿
+                <span class="color_mineshaft">
+                    <script type="text/javascript">
+                        myDate = new Date(Date.parse("2005-07-08T11:22:33")).toUTCString()
+                        document.write(myDate);
+                    </script>
+                </span>

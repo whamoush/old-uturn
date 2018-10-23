@@ -1,0 +1,226 @@
+﻿<%@ Master Language="VB" CodeFile="front.master.vb" Inherits="front" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109242607-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109242607-1');
+    </script>
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+    <title>U-Turn: community student services</title>
+    <meta name="title" content="U-Turn: community student services" />
+    <meta name="url" content="http://uturnonline.com" />
+    <meta name="description" content="U-turn is a student services center providing technical services pertaining to student life, with a special focus on high quality at exceptionally affordable prices. visit us on uturnonline.com." />
+    <link rel="image_src" href="http://uturnonline.com/img/des-logo.png" />
+    <meta name="keywords" content="student services, community center, hamra street, photocopy, copy center, bookshop, netcafe, internet cafe, counseling, professional advice, student life, christian books,  copy shop, books for sale, cheap books, books to read, new books, copy place near me" />
+    <!-- for Facebook -->
+    <meta property="og:title" content="U-Turn: community student services" />
+    <meta property="og:type" content="Student Services Center" />
+    <meta property="og:image" content="http://uturnonline.com/img/des-logo.png" />
+    <meta property="og:url" content="http://uturnonline.com" />
+    <meta property="og:description" content="U-turn is a student services center providing technical services pertaining to student life, with a special focus on high quality at exceptionally affordable prices. visit us on uturnonline.com." />
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="U-Turn: community student services" />
+    <meta name="twitter:description" content="U-turn is a student services center providing technical services pertaining to student life, with a special focus on high quality at exceptionally affordable prices. visit us on uturnonline.com." />
+    <meta name="twitter:image" content="http://uturnonline.com/img/des-logo.png" />
+    <meta name="twitter:url" content="http://uturnonline.com" />
+    <!-- CSS links -->
+    <link rel="stylesheet" type="text/css" href="css/screen_styles.css" />
+    <link rel="Stylesheet" type="text/css" href="css/lightslider.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:956px)"
+        href="css/screen_layout_medium.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)"
+        href="css/screen_layout_small.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- JQUERY DECLARATION -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+
+    <!-- //CSS links -->
+    <!--[if lt IE 9]>
+	<script type="text/javascript">
+    window.location = "belowie9.html";
+</script>
+<![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="nav-collapse">
+            <div id="menu-mobile" class="div_auto back_monza font_courier color_white fonts_1_2 ">
+                <!-- <p id="navigation-expanded">&nbsp;</p>-->
+                <asp:LinkButton ID="lbMobileOne" runat="server" PostBackUrl="default.aspx">Home</asp:LinkButton><span
+                    class="menu-bar">|</span><asp:LinkButton ID="lbMobileTwo" runat="server" PostBackUrl="services.aspx">Services</asp:LinkButton><span
+                        class="menu-bar">|</span><asp:LinkButton ID="lbMobileThree" runat="server" PostBackUrl="books.aspx">Books</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lnMobBooksAr" runat="server" PostBackUrl="books-arabic.aspx">كُتب</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileFour" runat="server" PostBackUrl="cybergarden.aspx">Cybergarden</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileFive" runat="server" PostBackUrl="help.aspx">Guidance</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="http://blog.uturnonline.com">Blog</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileTen" runat="server" PostBackUrl="readings.aspx">Readings</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobReadAr" runat="server" PostBackUrl="readings-arabic.aspx">قراءات</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileSix" runat="server" PostBackUrl="about.aspx">About</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileSeven" runat="server" PostBackUrl="contact.aspx">Contact Us</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="LinkButton1" runat="server" CssClass="back_green shadow_green" PostBackUrl="https://api.whatsapp.com/send?phone=96181749906">WhatsApp</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileEight" runat="server" PostBackUrl="privacy.aspx">Privacy Policy</asp:LinkButton>
+                <span class="menu-bar">|</span><asp:LinkButton ID="lbMobileNine" runat="server" PostBackUrl="credits.aspx">Site Credits</asp:LinkButton>
+            </div>
+        </div>
+        <a href="#" id="menu-toggle">my menu</a>
+        <div id="topbar" class="font_springsteel">
+            <div class="div_auto">
+                <div id="topbar-menu">  
+                    <a id="topbar-menu-1" class="back_buttercup color_mineshaft" href="contact.aspx">Contact Us</a>
+                    <a id="topbar-menu-4" target="_blank" class="back_green color_white" href="https://api.whatsapp.com/send?phone=96181749906">WhatsApp</a>
+                    <a id="topbar-menu-2" class="back_monza color_white" href="privacy.aspx">Privacy Policy</a> 
+                    <a id="topbar-menu-3" class="back_endeavour color_white" href="credits.aspx">Site Credits </a>
+                </div>
+                <p id="topbar-info">
+                    <a id="topbar-info-home" href="default.aspx" class="color_boulder">www.uturnonline.com</a>
+                </p>
+            </div>
+        </div>
+        <p class="clear-fix">
+        </p>
+        <div id="body-container" class="margin">
+            <div id="header" class="div_auto">
+                <h1 id="header-logo">
+                    <span class="logo-text">U-turn: Community Student Services</span>
+                    <a href="default.aspx">
+                        <img src="img/des-logo.png" alt="u-turn: community student services" />
+
+                    </a>
+                </h1>
+                <div id="header-rest">
+                    <asp:Repeater ID="rpCybergarden" runat="server" DataSourceID="ds_Cybergarden">
+                        <ItemTemplate>
+                            <div id="header-rest-welcome">
+                                <img src='img/<%#Eval("description") %>' alt='<%#Eval("category") %>' />
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <asp:SqlDataSource ID="ds_Cybergarden" runat="server" ConnectionString="<%$ ConnectionStrings:UturnCS %>"
+                        SelectCommand="SELECT [category], [description] FROM [general] WHERE [category]= 'cybergarden'"></asp:SqlDataSource>
+                    <p class="clear-fix">
+                    </p>
+                    <p class="seperator">
+                    </p>
+                    <div>
+                        <script>
+                            (function () {
+                                var cx = '014768036805331790789:tlrug5dnmni';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                    '//www.google.com/cse/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(gcse, s);
+                            })();
+                        </script>
+                        <gcse:searchbox-only></gcse:searchbox-only>
+                    </div>
+                    <!--<div class="search">
+                
+                    <input type="text" class="search-textbox" /><a class="search-button back_monza font_courier color_white" href="#">search</a>
+                </div>-->
+                </div>
+                <p class="clear-fix">
+                </p>
+            </div>
+
+            <div class="div_auto">
+                <ul id="lightSlider" class="font_courier bolded margin">
+                    <asp:Repeater ID="rpMarquee" runat="server" DataSourceID="ds_Marquee">
+                        <ItemTemplate>
+                            <li class="color_monza">
+                                <%#Eval("description")%></li>
+
+                        </ItemTemplate>
+                        <AlternatingItemTemplate>
+                            <li class="color_endeavour">
+                                <%#Eval("description")%></li>
+                        </AlternatingItemTemplate>
+                    </asp:Repeater>
+                </ul>
+            </div>
+            <asp:SqlDataSource ID="ds_Marquee" runat="server" ConnectionString="<%$ ConnectionStrings:UturnCS %>"
+                SelectCommand="SELECT [description] from [general] where category='marquee'"></asp:SqlDataSource>
+            <div>
+                <div id="menu" class="div_auto back_monza font_courier color_white fonts_1_2 ">
+                    <asp:LinkButton ID="lbOne" runat="server" PostBackUrl="default.aspx">Home</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="lbTwo" runat="server" PostBackUrl="services.aspx">Services</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="lbThree" runat="server" PostBackUrl="books.aspx">Books</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="lbBooksAr" runat="server" PostBackUrl="books-arabic.aspx">كُتب</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><a href="#">Cybergarden</a><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="lbFive" runat="server" PostBackUrl="help.aspx">Guidance</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="http://blog.uturnonline.com">Blog</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="lbTen" runat="server" PostBackUrl="readings.aspx">Readings</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="lbReadAr" runat="server" PostBackUrl="readings-arabic.aspx">قراءات</asp:LinkButton><!--
+                    --><span class="menu-bar">|</span><asp:LinkButton ID="lbSix" runat="server" PostBackUrl="about.aspx">About</asp:LinkButton>
+                </div>
+            </div>
+            <div class="margin">
+                <asp:ContentPlaceHolder ID="body" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="bottom" class="margin">
+            <div id="bottombar">
+                <div class="div_auto">
+                    <p class="color_lochmara font_courier">
+                        <script type="text/javascript">                        var myDate = new Date(); var myYear = myDate.getFullYear(); document.write("All Rights Reserved. " + myYear + " © U-Turn");</script>
+                    </p>
+                </div>
+            </div>
+            <div id="bottom-top">
+            </div>
+        </div>
+    </form>
+    <asp:ContentPlaceHolder ID="script" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- JQUERY, LIGHTSLIDER -->
+    <script type="text/javascript" src="js/lightslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var slider = $("#lightSlider").lightSlider({
+                item: 1,
+                speed: 800,
+                pause: 7000,
+                auto: true,
+                loop: true,
+                controls: false,
+                pager: false
+            });
+            slider.play();
+        });
+    </script>
+    <!-- END: JQUERY, LIGHTSLIDER -->
+
+    <!-- JQUERY, MOBILE NAVIGATION -->
+    <script type="text/javascript" src="js/responsive-nav.js"></script>
+    <script type="text/javascript">
+        var navigation = responsiveNav(".nav-collapse", {
+            animate: true,        // Boolean: Use CSS3 transitions, true or false
+            transition: 250,      // Integer: Speed of the transition, in milliseconds
+            label: "Menu",        // String: Label for the navigation toggle
+            insert: "after",      // String: Insert the toggle before or after the navigation
+            customToggle: "#menu-toggle",     // Selector: Specify the ID of a custom toggle
+            openPos: "relative",  // String: Position of the opened nav, relative or static
+            jsClass: "js",        // String: 'JS enabled' class which is added to <html> el
+            init: function () { },   // Function: Init callback
+            open: function () { },   // Function: Open callback
+            close: function () { }   // Function: Close callback
+        });
+    </script>
+    <!-- END: JQUERY, MOBILE NAVIGATION -->
+</body>
+</html>

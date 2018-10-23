@@ -1,0 +1,51 @@
+﻿div#topbar{height:9px;background-position:bottom;}
+
+div#topbar div#topbar-menu{display:none;}
+div#back div#topbar div#topbar-menu{display:block;float:left;}
+
+div#body-container div#header div#header-rest{width:100%;float:none;}
+div#body-container div#header div#header-rest div#header-rest-welcome{width:100%;}
+div#body-container div#header div#header-rest div#header-rest-welcome div#header-rest-welcome-welcome{height:auto;}
+
+
+
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_1{background-position:bottom left;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_2{background-position:-42px bottom;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_3{background-position:-84px bottom;}
+div#body-container div#header div#header-rest div#header-rest-welcome p#header-rest-welcome-social a#social_4{background-position:-125px bottom;}
+
+div#body-container div#menu{display:none;}
+
+a#menu-toggle{display:block;/*background:url(../img/navigation.png) no-repeat;*/font-size:0px;background:url(../img/navigation-responsive.png) no-repeat;width:44px;height:24px;/*margin-right:5px;*/margin-top:20px;margin-right:10px;}
+
+/*.services-button, .books-button{bottom:none;top:10px;}*/
+
+div#red_box{display:none;}
+
+div#content div#content-bookguidance div#content-bookguidance-left{float:none;width:100%;}
+div#content div#content-bookguidance div#content-bookguidance-guidance{width:100%;margin-left:0%;}
+div#content div#content-bookguidance div#content-bookguidance-guidance div#content-bookguidance-guidance-content{height:auto;border:2px solid #9e0219;}
+
+
+
+ul.content-items li, ul.content-items li.help-description, ul.content-items li.help-title{float:none;width:100%;}
+
+ul.content-items li.help-description{border-top:none;}
+
+div#contact ul li h3{font-size:1.2em;}
+.contact-label{top:auto;right:auto;bottom:10px;left:10px;}
+div#dash-links a{margin-right:0px;width:100%;}
+
+ul.content-items li.content-items-description{height:auto;}
+
+.list-description .list-description-price{display:block;position:static;bottom:10px;left:10px;}
+
+@-moz-document url-prefix() {
+   /* .text-rtl {
+        direction: ltr;
+        text-align: inherit;
+        background-color:#123466 !important;
+    }*/
+}
+
+  
